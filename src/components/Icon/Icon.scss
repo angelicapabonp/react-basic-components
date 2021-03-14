@@ -1,0 +1,58 @@
+@import '~styles';
+@import './tokens';
+
+.icon-default {
+  color: $color-icon-default;
+}
+
+.icon-primary {
+  color: $color-icon-primary;
+}
+
+.icon-secondary {
+  color: $color-icon-secondary;
+}
+
+.icon-xsmall {
+  font-size: $font-size-icon-xsmall;
+}
+
+.icon-small {
+  font-size: $font-size-icon-small;
+}
+
+.icon-medium {
+  font-size: $font-size-icon-medium;
+}
+
+.icon-large {
+  font-size: $font-size-icon-large;
+}
+
+.icon-xlarge {
+  font-size: $font-size-icon-xlarge;
+}
+
+.icon-with-bg {
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: $color-icon-bg;
+}
+
+.icon-click {
+  cursor: pointer;
+
+  &.icon-with-bg {
+    &:hover {
+      @include hover-state {
+        background-color: $color-icon-bg-hover;
+      }
+    }
+  }
+}
+
+.icon-disabled {
+  color: $color-icon-disabled;
+  cursor: not-allowed;
+}

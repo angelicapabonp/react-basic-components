@@ -1,0 +1,21 @@
+@function stripUnit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function pxToRem($target, $context: 16) {
+  @return (stripUnit($target) / $context) * 1rem;
+}
+
+@mixin text($fontSize, $lineHeight, $fontSizeMobile, $lineHeightMobile, $fontWeight) {
+  font-size: pxToRem($fontSizeMobile);
+  line-height: pxToRem($lineHeightMobile);
+  font-weight: $fontWeight;
+
+  @include min-media-medium {
+    font-size: pxToRem($fontSize);
+    line-height: pxToRem($lineHeight);
+  }
+}

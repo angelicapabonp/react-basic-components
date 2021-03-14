@@ -1,0 +1,58 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "import/extensions": ["error", "never", { "json": "always" }],
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "no-return-await": "off",
+    "no-extra-boolean-cast": "off",
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-unused-expressions": [1, { "allowTernary": true, "allowShortCircuit": true }],
+    "no-plusplus": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }], 
+    "react/jsx-props-no-spreading": ["off"],
+    "react/jsx-wrap-multilines": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-fragments": "off",
+    "react/no-array-index-key": "off",
+    "react/forbid-prop-types":"off",
+    "jsx-a11y/label-has-associated-control": "off"
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx", ".test.ts"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
