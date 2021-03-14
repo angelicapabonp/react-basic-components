@@ -1,1 +1,11 @@
+# 1.0.0 (2021-03-14)
+
+
+### Features
+
+* remove validation section ([1a7e17b](https://github.com/angelicapabonp/react-basic-components/commit/1a7e17b4badcfa1acb6c57724ed0e85c5defcbab))
+* **all:** add all files to first release ([4e9e2a3](https://github.com/angelicapabonp/react-basic-components/commit/4e9e2a3ebce8fbc0dc011a561d9f59db2d83a2d3))
+* **master:** first commit ([1dcf5b6](https://github.com/angelicapabonp/react-basic-components/commit/1dcf5b6783bf631716d3b9b8d56c44e1c249d0bc))
+* **release:** add master rule to release ([d9e92da](https://github.com/angelicapabonp/react-basic-components/commit/d9e92daa201bc78c2c7763bddccc7e0fd4fcdce7))
+
 # CHANGELOG
