@@ -1,0 +1,109 @@
+@import '~styles';
+@import './tokens';
+
+.circular-loader {
+  animation: circular-loader-rotate 2s linear infinite;
+  transform-origin: center center;
+  margin: auto;
+  stroke: var(--color-circular-loader-stroke);
+}
+
+.circular-loader-primary {
+  stroke: $color-circular-loader-primary;
+
+  --color-circular-loader-stroke: #{$color-circular-loader-primary};
+}
+
+.circular-loader-secondary {
+  stroke: $color-circular-loader-secondary;
+
+  --color-circular-loader-stroke: #{$color-circular-loader-secondary};
+}
+
+.circular-loader-default {
+  stroke: $color-circular-loader-default;
+
+  --color-circular-loader-stroke: #{$color-circular-loader-default};
+}
+
+.circular-loader-small {
+  width: 16px;
+  height: 16px;
+
+  & .circular-loader__path {
+    stroke-width: 5px;
+  }
+}
+
+.circular-loader-medium {
+  width: 24px;
+  height: 24px;
+
+  & .circular-loader__path {
+    stroke-width: 5px;
+  }
+}
+
+.circular-loader-large {
+  width: 32px;
+  height: 32px;
+
+  & .circular-loader_path {
+    stroke-width: 3px;
+  }
+}
+
+.circular-loader-xlarge {
+  width: 40px;
+  height: 40px;
+
+  & .circular-loader_path {
+    stroke-width: 3px;
+  }
+}
+
+.circular-loader__path {
+  animation: loader-dash 1.5s ease-in-out infinite, loader-color 6s ease-in-out infinite;
+  fill: none;
+  stroke-dasharray: 150, 200;
+  stroke-dashoffset: -10;
+  stroke-linecap: round;
+  stroke-width: 5px;
+}
+
+@keyframes circular-loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes loader-color {
+  0% {
+    stroke: var(--color-circular-loader-stroke);
+  }
+  40% {
+    stroke: var(--color-circular-loader-stroke);
+  }
+  66% {
+    stroke: var(--color-circular-loader-stroke);
+  }
+  80%,
+  90% {
+    stroke: var(--color-circular-loader-stroke);
+  }
+}

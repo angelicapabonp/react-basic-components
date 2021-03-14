@@ -1,0 +1,21 @@
+@import '~styles/tokens';
+
+$color-button-primary-bg: $color-primary;
+$color-button-primary-bg-hover: $color-dark-blue-40;
+$color-button-primary-bg-active: $color-dark-blue-60;
+$color-button-primary-bg-disabled: $color-disabled;
+$color-button-primary-text: $color-white;
+$color-button-outline-bg: transparent;
+$color-button-outline-bg-hover: $color-light-grey-10;
+$color-button-outline-bg-active: $color-light-grey-20;
+$color-button-outline-bg-disabled: transparent;
+$color-button-outline-text: $color-title;
+$color-button-outline-border: $color-dark-grey-100;
+$color-button-outline-border-disabled: $color-disabled;
+$color-button-text-bg: transparent;
+$color-button-text-bg-hover: $color-light-blue-10;
+$color-button-text-bg-active: $color-light-blue-20;
+$color-button-text-bg-disabled: transparent;
+$color-button-text-text: $color-primary;
+$color-button-text-disabled: $color-light-grey-50;
+$color-button-box-shadow: $color-box-shadow;

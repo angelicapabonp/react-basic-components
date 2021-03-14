@@ -1,0 +1,163 @@
+@import '~styles';
+@import './tokens';
+
+.text-field__form-group {
+  position: relative;
+  width: 100%;
+
+  @include min-media-xsmall {
+    width: fit-content;
+  }
+}
+
+.text-field {
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  padding-top: pxToRem(16);
+  padding-bottom: pxToRem(16);
+  padding-right: pxToRem(16);
+  padding-left: pxToRem(16);
+  min-width: 100%;
+  width: 100%;
+  height: pxToRem(56);
+  box-sizing: border-box;
+  background: $color-text-field-bg;
+  border: none;
+  border-bottom: 1px solid $color-text-field-border;
+  font-family: inherit;
+  font-weight: $font-weight-semi-bold;
+  font-size: pxToRem($font-size-body-medium);
+  line-height: normal;
+  color: $color-text-field-text;
+
+  &::placeholder {
+    color: $color-text-field-placeholder;
+    font-weight: $font-weight-medium;
+    font-size: pxToRem($font-size-body-medium);
+    opacity: 0;
+  }
+
+  &:hover {
+    @include hover-state {
+      box-shadow: $box-shadow-bottom-medium $color-text-field-box-shadow;
+    }
+  }
+
+  &:focus {
+    box-shadow: none;
+    border-bottom: 2px solid $color-text-field-border-focus;
+
+    ~ .text-field-floating-label__text {
+      color: $color-text-field-label-focus;
+    }
+  }
+
+  &:disabled {
+    /* Disabled Input */
+    background-color: $color-text-field-bg-disabled;
+    color: $color-text-field-text-disabled;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  @include min-media-xsmall {
+    min-width: pxToRem(352);
+  }
+}
+
+.text-field.text-field-show-placeholder:focus::placeholder {
+  opacity: 1;
+}
+
+.text-field {
+  &:focus,
+  &:not(:placeholder-shown),
+  &.text-field-filled {
+    padding-top: pxToRem(24);
+    padding-bottom: pxToRem(8);
+
+    ~ .text-field-floating-label__text {
+      font-size: pxToRem($font-size-caption);
+      line-height: $line-height-caption;
+      top: pxToRem(8);
+      transition: top 0.2s ease, font-size 0.2s ease;
+    }
+  }
+}
+
+.text-field-floating-label__text {
+  position: absolute;
+  color: $color-text-field-label;
+  font-weight: $font-weight-medium;
+  font-size: pxToRem($font-size-body-medium);
+  line-height: pxToRem(24);
+  top: pxToRem(24);
+  left: pxToRem(16);
+  pointer-events: none;
+  transition: top 0.2s ease, font-size 0.2s ease;
+}
+
+/* Error text-field */
+.text-field-error:not(:disabled) {
+  border-bottom: 2px solid $color-text-field-border-error;
+  margin-left: pxToRem(-1);
+  margin-right: pxToRem(-1);
+
+  &:focus,
+  &:not(:placeholder-shown),
+  &.text-field-filled {
+    ~ .text-field-floating-label__text {
+      color: $color-text-field-label-error;
+    }
+  }
+}
+
+.text-field__feedback {
+  margin-top: pxToRem(4);
+  margin-left: pxToRem(16);
+  line-height: $line-height-caption;
+  display: block;
+  font-weight: $font-weight-regular;
+  font-size: pxToRem($font-size-caption);
+  color: $color-text-field-feedback-error;
+}
+
+/* Telephone text-field */
+.text-field-telephone__group {
+  position: relative;
+}
+
+.text-field-telephone {
+  &:focus,
+  &:not(:placeholder-shown),
+  &.text-field-filled {
+    padding-left: pxToRem(52);
+
+    ~ .text-field-telephone__prefix {
+      display: block;
+    }
+  }
+
+  &.text-field-floating-label:focus,
+  &.text-field-floating-label:not(:placeholder-shown),
+  &.text-field-floating-label.text-field-filled {
+    ~ .text-field-telephone__prefix {
+      top: pxToRem(24.5);
+    }
+  }
+}
+
+.text-field-telephone__prefix {
+  position: absolute;
+  top: pxToRem(17);
+  left: pxToRem(16);
+  font-weight: $font-weight-semi-bold;
+  font-size: pxToRem($font-size-body-medium);
+  line-height: $line-height-body-medium;
+  color: $color-text-field-telephone-prefix-text;
+  pointer-events: none;
+  display: none;
+}

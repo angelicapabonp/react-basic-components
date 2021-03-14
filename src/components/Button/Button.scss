@@ -1,0 +1,203 @@
+@import '~styles';
+@import './tokens';
+
+.btn {
+  appearance: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 24px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: inherit;
+
+  &:not(.btn-loading):disabled {
+    color: $color-button-text-disabled;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.btn-small {
+  @include text(
+    $font-size-button-small,
+    $line-height-button-small,
+    $font-size-button-small,
+    $line-height-button-small,
+    $font-weight-medium
+  );
+
+  min-width: 72px;
+  height: 32px;
+  padding: 8px 12px;
+  box-shadow: $box-shadow-bottom-small $color-button-box-shadow;
+
+  > i {
+    font-size: $font-size-button-icon-small;
+  }
+}
+
+.btn-medium {
+  @include text(
+    $font-size-button-medium,
+    $line-height-button-medium,
+    $font-size-button-medium,
+    $line-height-button-medium,
+    $font-weight-medium
+  );
+
+  min-width: 96px;
+  height: 40px;
+  padding: 8px 16px;
+  box-shadow: $box-shadow-bottom-medium $color-button-box-shadow;
+
+  > i {
+    font-size: $font-size-button-icon-medium;
+  }
+}
+
+.btn-large {
+  @include text(
+    $font-size-button-large,
+    $line-height-button-large,
+    $font-size-button-large,
+    $line-height-button-large,
+    $font-weight-medium
+  );
+
+  min-width: 128px;
+  height: 48px;
+  padding: 8px 20px;
+  box-shadow: $box-shadow-bottom-large $color-button-box-shadow;
+
+  > i {
+    font-size: $font-size-button-icon-large;
+  }
+}
+
+.btn-xlarge {
+  @include text(
+    $font-size-button-xlarge,
+    $line-height-button-xlarge,
+    $font-size-button-xlarge,
+    $line-height-button-xlarge,
+    $font-weight-medium
+  );
+
+  min-width: 160px;
+  height: 56px;
+  padding: 8px 24px;
+  box-shadow: $box-shadow-bottom-large $color-button-box-shadow;
+  border-radius: 100px;
+
+  > i {
+    font-size: $font-size-button-icon-xlarge;
+  }
+}
+
+.btn-primary {
+  --color-button-loader-stroke: #{$color-button-primary-text};
+
+  background-color: $color-button-primary-bg;
+  color: $color-button-primary-text;
+  font-weight: $font-weight-bold;
+  border: none;
+
+  &:not(.btn-loading) {
+    &:hover {
+      @include hover-state {
+        background-color: $color-button-primary-bg-hover;
+      }
+    }
+
+    &:active {
+      background-color: $color-button-primary-bg-active;
+    }
+
+    &:disabled {
+      background-color: $color-button-primary-bg-disabled;
+    }
+  }
+}
+
+.btn-outline {
+  --color-button-loader-stroke: #{$color-button-outline-text};
+
+  background-color: $color-button-outline-bg;
+  color: $color-button-outline-text;
+  font-weight: $font-weight-medium;
+  border: 1px solid $color-button-outline-border;
+  box-shadow: none;
+
+  &:not(.btn-loading) {
+    &:hover {
+      @include hover-state {
+        background-color: $color-button-outline-bg-hover;
+      }
+    }
+
+    &:active {
+      background-color: $color-button-outline-bg-active;
+    }
+
+    &:disabled {
+      background-color: $color-button-outline-bg-disabled;
+      border: 1px solid $color-button-outline-border-disabled;
+    }
+  }
+}
+
+.btn-text {
+  --color-button-loader-stroke: #{$color-button-text-text};
+
+  background-color: $color-button-text-bg;
+  color: $color-button-text-text;
+  font-weight: $font-weight-medium;
+  border: none;
+  box-shadow: none;
+
+  &:not(.btn-loading) {
+    &:hover {
+      @include hover-state {
+        background-color: $color-button-text-bg-hover;
+      }
+    }
+
+    &:active {
+      background-color: $color-button-text-bg-active;
+    }
+
+    &:disabled {
+      background-color: $color-button-text-bg-disabled;
+    }
+  }
+}
+
+.btn-loading {
+  cursor: not-allowed;
+}
+
+.btn__icon-left {
+  flex-direction: row;
+
+  > img,
+  > i,
+  > svg {
+    margin-right: 8px;
+  }
+}
+
+.btn__icon-right {
+  flex-direction: row-reverse;
+
+  > img,
+  > i,
+  > svg {
+    margin-left: 8px;
+  }
+}
