@@ -1,15 +1,12 @@
 name: React-basic-components Package
 
 on:
-  push:
-    branches:
-      - 'feature/**'
   pull_request:
     branches:
       - master
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - master
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -53,7 +50,7 @@ jobs:
       - name: Build
         run: yarn build
   release:
-    if: ${{ github.event_name == 'release' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'master' }}
     needs: build
     runs-on: ubuntu-latest
     steps:
