@@ -49,17 +49,12 @@ jobs:
             ${{ runner.os }}-
       - name: Build
         run: yarn build
-      - name: Get cache /dist
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-dist
+      - name: Upload /dist
+        uses: actions/upload-artifact@v1
         with:
+          name: dist-folder
           path: '**/dist'
-          key: ${{ runner.os }}-dist-${{ env.cache-name }}
-          restore-keys: |
-            ${{ runner.os }}-dist-${{ env.cache-name }}-
-            ${{ runner.os }}-dist-
-            ${{ runner.os }}-
+
   release:
     if: ${{ github.event_name == 'push' }}
     needs: build
@@ -78,17 +73,10 @@ jobs:
             ${{ runner.os }}-modules-${{ env.cache-name }}-
             ${{ runner.os }}-modules-
             ${{ runner.os }}-
-      - name: Get cache /dist
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-dist
+      - name: Download /dist
+        uses: actions/download-artifact@v1
         with:
-          path: '**/dist'
-          key: ${{ runner.os }}-dist-${{ env.cache-name }}
-          restore-keys: |
-            ${{ runner.os }}-dist-${{ env.cache-name }}-
-            ${{ runner.os }}-dist-
-            ${{ runner.os }}-
+          name: dist-folder
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v2
         with:
