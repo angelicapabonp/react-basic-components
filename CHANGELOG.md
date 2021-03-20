@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.1...v1.0.2) (2021-03-20)
+
+
+### Bug Fixes
+
+* **alias:** fix alias to publish correctly all the references ([609c0eb](https://github.com/angelicapabonp/react-basic-components/commit/609c0eb2d1a78175ebb7ffdfbc8da240f4dd025e))
+
 ## [1.0.1](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.0...v1.0.1) (2021-03-20)
 
 
