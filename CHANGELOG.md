@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.0...v1.0.1) (2021-03-20)
+
+
+### Bug Fixes
+
+* **pipeline:** add cache to add dist ([e72c7f8](https://github.com/angelicapabonp/react-basic-components/commit/e72c7f88b22b50e98981540f4526e0fe8b6f3070))
+
 # 1.0.0 (2021-03-14)
 
 
