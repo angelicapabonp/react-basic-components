@@ -38,8 +38,6 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
     modules: ['node_modules'],
     alias: {
-      components: path.resolve(__dirname, 'src/components'),
-      utils: path.resolve(__dirname, 'src/utils'),
       styles: path.resolve(__dirname, 'src/styles'),
     },
   },
