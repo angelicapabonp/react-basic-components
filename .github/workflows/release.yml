@@ -52,7 +52,7 @@ jobs:
       - name: Upload /dist
         uses: actions/upload-artifact@v1
         with:
-          name: dist-folder
+          name: dist
           path: './dist'
 
   release:
@@ -76,7 +76,7 @@ jobs:
       - name: Download /dist
         uses: actions/download-artifact@v1
         with:
-          name: dist-folder
+          name: dist
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v2
         with:
