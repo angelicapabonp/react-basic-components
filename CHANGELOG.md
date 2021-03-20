@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.4...v1.0.5) (2021-03-20)
+
+
+### Bug Fixes
+
+* **pipeline:** change folder name ([482c9f6](https://github.com/angelicapabonp/react-basic-components/commit/482c9f615482905d5c8d29ba62923af0d020192f))
+
 ## [1.0.4](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.3...v1.0.4) (2021-03-20)
 
 
