@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.2...v1.0.3) (2021-03-20)
+
+
+### Bug Fixes
+
+* **alias:** remove alias ([6a039f5](https://github.com/angelicapabonp/react-basic-components/commit/6a039f54813287b7b404a7b5071b86c9556f0323))
+
 ## [1.0.2](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.1...v1.0.2) (2021-03-20)
 
 
