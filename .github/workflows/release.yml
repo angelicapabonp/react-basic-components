@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: dist-folder
-          path: '**/dist'
+          path: './dist'
 
   release:
     if: ${{ github.event_name == 'push' }}
