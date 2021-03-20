@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.5...v1.0.6) (2021-03-20)
+
+
+### Bug Fixes
+
+* **button:** fix loading width and ref use ([fd8a941](https://github.com/angelicapabonp/react-basic-components/commit/fd8a94123171a6e35be91e6c01b3aefadd4774ec))
+
 ## [1.0.5](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.4...v1.0.5) (2021-03-20)
 
 
