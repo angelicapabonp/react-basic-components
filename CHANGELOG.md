@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.3...v1.0.4) (2021-03-20)
+
+
+### Bug Fixes
+
+* **pipeline:** fix path ([2c68465](https://github.com/angelicapabonp/react-basic-components/commit/2c684650a430c65689c9bc1e90e95ea694f2796c))
+* **pipeline:** fix upload an download of dist folder ([33c0b35](https://github.com/angelicapabonp/react-basic-components/commit/33c0b354285b7240debb6d3841bcccfa76d02267))
+
 ## [1.0.3](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.2...v1.0.3) (2021-03-20)
 
 
