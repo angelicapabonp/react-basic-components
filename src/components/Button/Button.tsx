@@ -1,4 +1,4 @@
-import React, { useRef, ReactElement, useState, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 
 import CircularLoader, { CircularLoaderVariantType } from '../CircularLoader';
@@ -69,9 +69,6 @@ const Button = ({
   iconClassName,
   ...props
 }: ButtonT): ReactElement => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const [loadingWidth, setLoadingWidth] = useState<number>();
-
   const _className = classNames('btn', `btn-${variant}`, `btn-${size}`, {
     'btn-loading': loading,
     [`btn__icon-${iconPosition}`]: icon && !loading,
@@ -92,23 +89,13 @@ const Button = ({
     return 'default';
   };
 
-  useEffect(() => {
-    if (loading) {
-      setLoadingWidth(buttonRef.current?.clientWidth || undefined);
-    } else {
-      setLoadingWidth(undefined);
-    }
-  }, [loading]);
-
   return (
     <button
-      ref={buttonRef}
       id={id}
       className={_className}
       disabled={disabled || loading}
       type="button"
       onClick={onClick}
-      style={{ width: loadingWidth }}
       {...props}
     >
       {loading ? (

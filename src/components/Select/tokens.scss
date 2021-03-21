@@ -1,0 +1,16 @@
+@import '~styles/tokens';
+
+$color-select-bg: $color-white;
+$color-select-bg-hover: $color-light-grey-10;
+$color-select-bg-disabled: #ebeff5;
+$color-select-border: $color-border;
+$color-select-border-focus: $color-primary;
+$color-select-border-error: $color-danger;
+$color-select-text: $color-title;
+$color-select-text-disabled: $color-placeholder;
+$color-select-label: $color-placeholder;
+$color-select-label-focus: $color-primary;
+$color-select-label-error: $color-danger;
+$color-select-placeholder: $color-placeholder;
+$color-select-feedback-error: $color-danger;
+$color-select-scrollbar: $color-body;
