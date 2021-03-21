@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.0...v1.1.1) (2021-03-21)
+
+
+### Bug Fixes
+
+* **select:** export component ([1560fdf](https://github.com/angelicapabonp/react-basic-components/commit/1560fdf705b858ad4c0f5e4d195b82bbf6a2cb4b))
+
 # [1.1.0](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.6...v1.1.0) (2021-03-21)
 
 
