@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-computed-key */
 
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import classnames from 'classnames';
 
 import Icon from '../Icon';
@@ -46,8 +46,6 @@ type SelectT = {
   classNameContainer?: string;
 };
 
-const optionsHeightSize = 40;
-const breakPointMd = 768;
 const regExpAccents = /[\u0300-\u036f]/g;
 const regExpLettersAccents = /[À-ÿ]+/;
 const unicode = 'NFD';
@@ -81,9 +79,6 @@ function Select({
   className,
   classNameContainer,
 }: SelectT) {
-  const selectRef = useRef<HTMLDivElement>(null);
-  const selectOptionsRef = useRef<HTMLDivElement>(null);
-
   const getInitialInfo = (
     newValue: string | number | undefined,
     newValueObject: any,
@@ -114,7 +109,6 @@ function Select({
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [showError, setShowError] = useState<boolean>(false);
   const [visited, setVisited] = useState<boolean>(false);
-  const [optionsUp, setOptionsUp] = useState<boolean>(false);
   const [isFocusByIcon, setIsFocusByIcon] = useState<boolean>(false);
 
   const feedbackText = !!feedback
@@ -131,9 +125,7 @@ function Select({
     ['select_focus_icon']: isFocusByIcon,
     [`${className}`]: className,
   });
-  const selectOptionsClasses = classnames('select_options', {
-    ['select_options_up']: optionsUp,
-  });
+  const selectOptionsClasses = classnames('select_options');
   const selectOptionClasses = (option: any) => {
     const valueOption = valueProp ? option[valueProp] : option;
     const textOption = textProp ? option[textProp] : option;
@@ -151,15 +143,7 @@ function Select({
     setVisited(true);
     setIsExpanded(true);
   };
-  const selectClickOutHandler = async (event: any) => {
-    if (
-      selectRef.current &&
-      selectRef.current?.contains(selectOptionsRef?.current) &&
-      !selectRef.current.contains(event.target)
-    ) {
-      setIsExpanded(false);
-    }
-  };
+
   const onClickIconHandler = () => {
     if (!isExpanded) {
       setIsFocusByIcon(true);
@@ -218,22 +202,6 @@ function Select({
       setInputSearch(finalInfo.text);
       setIsFocusByIcon(false);
     }
-
-    if (isExpanded) {
-      const maxOptionsHeightDesktopSize = 272;
-      const maxOptionsHeightMobileSize = 152;
-      const spacingHeightSize = 56;
-
-      const maxOptionsHeightsize =
-        window.innerWidth > breakPointMd ? maxOptionsHeightDesktopSize : maxOptionsHeightMobileSize;
-
-      const bottomSelect = selectRef.current?.getBoundingClientRect().bottom || 0;
-      const lengthOptionsHeight = options.length * optionsHeightSize;
-      const heightMenu =
-        lengthOptionsHeight < maxOptionsHeightsize ? lengthOptionsHeight : maxOptionsHeightsize;
-
-      setOptionsUp(bottomSelect + heightMenu + spacingHeightSize > window.innerHeight);
-    }
   }, [isExpanded]);
 
   useEffect(() => {
@@ -247,16 +215,8 @@ function Select({
     setOptionsFiltered(options);
   }, [value, valueObject, options]);
 
-  useEffect(() => {
-    window.addEventListener('click', selectClickOutHandler, false);
-
-    return () => {
-      window.removeEventListener('click', selectClickOutHandler, false);
-    };
-  }, []);
-
   return (
-    <div id={id} className={selectContainerClasses} ref={selectRef}>
+    <div id={id} className={selectContainerClasses}>
       <div>
         <input
           type="text"
@@ -292,7 +252,7 @@ function Select({
       </div>
 
       {isExpanded && (
-        <div className={selectOptionsClasses} ref={selectOptionsRef}>
+        <div className={selectOptionsClasses}>
           {optionsFiltered.map((option: any, key: number) => (
             <div
               key={`select_option_${key}`}
