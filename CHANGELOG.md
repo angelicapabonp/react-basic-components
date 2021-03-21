@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.3...v1.1.4) (2021-03-21)
+
+
+### Bug Fixes
+
+* **package:** add dependencie ([e7cc818](https://github.com/angelicapabonp/react-basic-components/commit/e7cc818ad48702d140c07d7e8c3d3a78c629466d))
+
 ## [1.1.3](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.2...v1.1.3) (2021-03-21)
 
 
