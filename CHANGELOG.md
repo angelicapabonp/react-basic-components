@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.2...v1.1.3) (2021-03-21)
+
+
+### Bug Fixes
+
+* **package:** expose dependencies as peer ([fb46a06](https://github.com/angelicapabonp/react-basic-components/commit/fb46a06dc8260beefb1bb45d4a98542baccfdffc))
+
 ## [1.1.2](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.1...v1.1.2) (2021-03-21)
 
 
