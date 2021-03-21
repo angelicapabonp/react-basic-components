@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.1...v1.1.2) (2021-03-21)
+
+
+### Bug Fixes
+
+* **select:** remove all about ref ([4c2e1d6](https://github.com/angelicapabonp/react-basic-components/commit/4c2e1d6c8f0b1b7047899a17b75360489e183a8c))
+
 ## [1.1.1](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.0...v1.1.1) (2021-03-21)
 
 
