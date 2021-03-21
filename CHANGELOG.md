@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.6...v1.1.0) (2021-03-21)
+
+
+### Bug Fixes
+
+* **button:** remove ref use ([32344bb](https://github.com/angelicapabonp/react-basic-components/commit/32344bbd421415e18ab26192c26bf356364f10c8))
+* **textfield:** use tokens variables name ([4d1e96a](https://github.com/angelicapabonp/react-basic-components/commit/4d1e96a0c31a21a30d8bd36a9edf966eee75dd27))
+
+
+### Features
+
+* **select:** add new component ([8a29b67](https://github.com/angelicapabonp/react-basic-components/commit/8a29b67c40e868c3c4c32c03dcb7357814c7e781))
+
 ## [1.0.6](https://github.com/angelicapabonp/react-basic-components/compare/v1.0.5...v1.0.6) (2021-03-20)
 
 
