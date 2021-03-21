@@ -22,6 +22,10 @@
     "test:lint": "eslint --ext .tsx --ext .ts src/",
     "release": "semantic-release"
   },
+  "peerdependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^17.0.1",
