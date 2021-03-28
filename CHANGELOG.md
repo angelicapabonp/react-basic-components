@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.5...v1.1.6) (2021-03-28)
+
+
+### Bug Fixes
+
+* **buttonselect:** get back useref ([d6afb80](https://github.com/angelicapabonp/react-basic-components/commit/d6afb8056cb95b2ad9beb951b1ae71e66ea65496))
+
 ## [1.1.5](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.4...v1.1.5) (2021-03-28)
 
 
