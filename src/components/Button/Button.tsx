@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useRef } from 'react';
 import classNames from 'classnames';
 
 import CircularLoader, { CircularLoaderVariantType } from '../CircularLoader';
@@ -69,11 +69,15 @@ const Button = ({
   iconClassName,
   ...props
 }: ButtonT): ReactElement => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   const _className = classNames('btn', `btn-${variant}`, `btn-${size}`, {
     'btn-loading': loading,
     [`btn__icon-${iconPosition}`]: icon && !loading,
     [`${className}`]: className,
   });
+
+  const btnWidth: number | undefined = loading ? buttonRef.current?.clientWidth : undefined;
 
   const loaderVariant: CircularLoaderVariantType = variant === 'primary' ? 'secondary' : 'default';
 
@@ -91,11 +95,13 @@ const Button = ({
 
   return (
     <button
+      ref={buttonRef}
       id={id}
       className={_className}
       disabled={disabled || loading}
       type="button"
       onClick={onClick}
+      style={{ width: btnWidth }}
       {...props}
     >
       {loading ? (

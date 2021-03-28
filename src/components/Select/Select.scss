@@ -140,8 +140,6 @@
 /* Error select */
 .select_error:not(:disabled) {
   border-bottom: pxToRem(2) solid $color-select-border-error;
-  margin-left: pxToRem(-1);
-  margin-right: pxToRem(-1);
 
   &:focus,
   &.select_filled,
