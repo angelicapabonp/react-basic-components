@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.4...v1.1.5) (2021-03-28)
+
+
+### Bug Fixes
+
+* **config:** modify webpack add node-externals ([0ec4764](https://github.com/angelicapabonp/react-basic-components/commit/0ec476417d9137c41046804fea9e6fa114f8ac56))
+
 ## [1.1.4](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.3...v1.1.4) (2021-03-21)
 
 
