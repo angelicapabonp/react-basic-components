@@ -1,0 +1,26 @@
+{
+  "box-shadow": {
+    "top": {
+      "small": {
+        "value": "0px -4px 12px"
+      },
+      "medium": {
+        "value": "0px -6px 14px"
+      },
+      "large": {
+        "value": "0px -10px 16px"
+      }
+    },
+    "bottom": {
+      "small": {
+        "value": "0px 4px 12px"
+      },
+      "medium": {
+        "value": "0px 6px 14px"
+      },
+      "large": {
+        "value": "0px 10px 16px"
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './TextField.scss';
 
-type TextFieldT = {
+export type TextFieldT = {
   /**
    * Declares id attribute.
    */
@@ -52,6 +52,10 @@ type TextFieldT = {
    *  Declares disabled state.
    */
   disabled?: boolean;
+  /**
+   *  Declares input type.
+   */
+  type?: string;
   children?: any;
 };
 
@@ -72,6 +76,7 @@ function TextField({
   hasError,
   feedback,
   disabled,
+  type,
   children,
   ...props
 }: TextFieldT) {
@@ -86,7 +91,7 @@ function TextField({
     <div className="text-field__form-group" data-testid={id}>
       <input
         id={id}
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
@@ -112,6 +117,7 @@ TextField.defaultProps = {
   showPlaceholder: false,
   hasError: false,
   disabled: false,
+  type: 'text',
 };
 
 export default TextField;

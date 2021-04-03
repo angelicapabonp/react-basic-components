@@ -5,6 +5,6 @@ import Icon from './Icon';
 export const Default = (args) => <Icon {...args} />;
 
 export default {
-  title: 'React Components/Atoms/Icon',
+  title: 'Atoms/Icon',
   component: Icon,
 };

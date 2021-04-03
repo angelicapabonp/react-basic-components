@@ -1,0 +1,41 @@
+{
+  "source": [
+    "./src/styles/tokens/**/*.json"
+  ],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "./src/styles/tokens/dist/",
+      "files": [
+        {
+          "destination": "tokens.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "./src/styles/tokens/dist/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "js": {
+      "transforms": [
+        "attribute/cti",
+        "name/cti/camel",
+        "color/css"
+      ],
+      "buildPath": "./src/styles/tokens/dist/",
+      "files": [
+        {
+          "destination": "tokens.js",
+          "format": "javascript/es6"
+        }
+      ]
+    }
+  }
+}

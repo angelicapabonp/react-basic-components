@@ -5,6 +5,6 @@ import Textfield from '.';
 export const Default = (args) => <Textfield {...args} />;
 
 export default {
-  title: 'React Components/Atoms/Textfield',
+  title: 'Atoms/Textfield',
   component: Textfield,
 };

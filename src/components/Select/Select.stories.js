@@ -16,6 +16,6 @@ Default.args = {
 };
 
 export default {
-  title: 'React Components/Atoms/Select',
+  title: 'Atoms/Select',
   component: Select,
 };
