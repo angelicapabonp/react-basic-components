@@ -11,6 +11,7 @@ export const formatMoney = (value: string | number = 0, options: any) => {
 
 export const formatCLP = (value: string | number, options?: any) => {
   const optionsDefault = {
+    showSymbol: true,
     symbol: '$',
     separator: {
       miles: '.',
@@ -22,5 +23,11 @@ export const formatCLP = (value: string | number, options?: any) => {
     ...options,
   };
 
-  return `${optionsDefault.symbol}${formatMoney(value, optionsDefault)}`;
+  return optionsDefault.showSymbol
+    ? `${optionsDefault.symbol}${formatMoney(value, optionsDefault)}`
+    : formatMoney(value, optionsDefault);
+};
+
+export const unFormatMoney = (value: string) => {
+  return value.replace(/\D+/g, '');
 };
