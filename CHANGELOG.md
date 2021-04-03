@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.6...v1.2.0) (2021-04-03)
+
+
+### Features
+
+* **textfieldamount:** add new currency textfield ([b11cb00](https://github.com/angelicapabonp/react-basic-components/commit/b11cb00e73d8475337f376a91f619d8368f5a659))
+
 ## [1.1.6](https://github.com/angelicapabonp/react-basic-components/compare/v1.1.5...v1.1.6) (2021-03-28)
 
 
