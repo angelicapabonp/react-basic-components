@@ -1,0 +1,48 @@
+{
+  "spacing": {
+    "small": {
+      "xsmall": {
+        "value": "4px",
+        "group": "small"
+      },
+      "small": {
+        "value": "8px",
+        "group": "small"
+      },
+      "medium": {
+        "value": "16px",
+        "group": "small"
+      },
+      "large": {
+        "value": "24px",
+        "group": "small"
+      },
+      "xlarge": {
+        "value": "32px",
+        "group": "small"
+      }
+    },
+    "big": {
+      "xsmall": {
+        "value": "40px",
+        "group": "big"
+      },
+      "small": {
+        "value": "48px",
+        "group": "big"
+      },
+      "medium": {
+        "value": "56px",
+        "group": "big"
+      },
+      "large": {
+        "value": "64px",
+        "group": "big"
+      },
+      "xlarge": {
+        "value": "72px",
+        "group": "big"
+      }
+    }
+  }
+}
