@@ -8,6 +8,7 @@ public-storybook
 
 # production
 /dist
+/src/styles/tokens/dist
 
 # misc
 .DS_Store

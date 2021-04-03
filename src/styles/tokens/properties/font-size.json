@@ -1,0 +1,121 @@
+{
+  "font-size": {
+    "display": {
+      "xlarge": {
+        "value": "56px"
+      },
+      "xlarge-responsive": {
+        "value": "40px"
+      },
+      "large": {
+        "value": "48px"
+      },
+      "large-responsive": {
+        "value": "32px"
+      },
+      "medium": {
+        "value": "40px"
+      },
+      "medium-responsive": {
+        "value": "24px"
+      },
+      "small": {
+        "value": "32px"
+      },
+      "small-responsive": {
+        "value": "24px"
+      },
+      "xsmall": {
+        "value": "24px"
+      },
+      "xsmall-responsive": {
+        "value": "24px"
+      }
+    },
+    "title": {
+      "xlarge": {
+        "value": "24px"
+      },
+      "large": {
+        "value": "18px"
+      },
+      "medium": {
+        "value": "16px"
+      },
+      "small": {
+        "value": "14px"
+      }
+    },
+    "button": {
+      "xlarge": {
+        "value": "18px"
+      },
+      "large": {
+        "value": "16px"
+      },
+      "medium": {
+        "value": "14px"
+      },
+      "small": {
+        "value": "12px"
+      },
+      "icon": {
+        "xlarge": {
+          "value": "28px"
+        },
+        "large": {
+          "value": "24px"
+        },
+        "medium": {
+          "value": "20px"
+        },
+        "small": {
+          "value": "16px"
+        }
+      }
+    },
+    "body": {
+      "xlarge": {
+        "value": "24px"
+      },
+      "xlarge-responsive": {
+        "value": "18px"
+      },
+      "large": {
+        "value": "18px"
+      },
+      "large-responsive": {
+        "value": "16px"
+      },
+      "medium": {
+        "value": "16px"
+      },
+      "medium-responsive": {
+        "value": "14px"
+      },
+      "small": {
+        "value": "14px"
+      }
+    },
+    "caption": {
+      "value": "12px"
+    },
+    "icon": {
+      "xlarge": {
+        "value": "32px"
+      },
+      "large": {
+        "value": "28px"
+      },
+      "medium": {
+        "value": "24px"
+      },
+      "small": {
+        "value": "20px"
+      },
+      "xsmall": {
+        "value": "16px"
+      }
+    }
+  }
+}

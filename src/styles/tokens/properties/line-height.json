@@ -1,0 +1,90 @@
+{
+  "line-height": {
+    "display": {
+      "xlarge": {
+        "value": "64px"
+      },
+      "xlarge-responsive": {
+        "value": "48px"
+      },
+      "large": {
+        "value": "56px"
+      },
+      "large-responsive": {
+        "value": "40px"
+      },
+      "medium": {
+        "value": "48px"
+      },
+      "medium-responsive": {
+        "value": "32px"
+      },
+      "small": {
+        "value": "40px"
+      },
+      "small-responsive": {
+        "value": "32px"
+      },
+      "xsmall": {
+        "value": "32px"
+      },
+      "xsmall-responsive": {
+        "value": "32px"
+      }
+    },
+    "title": {
+      "xlarge": {
+        "value": "32px"
+      },
+      "large": {
+        "value": "24px"
+      },
+      "medium": {
+        "value": "24px"
+      },
+      "small": {
+        "value": "24px"
+      }
+    },
+    "button": {
+      "xlarge": {
+        "value": "40px"
+      },
+      "large": {
+        "value": "32px"
+      },
+      "medium": {
+        "value": "24px"
+      },
+      "small": {
+        "value": "16px"
+      }
+    },
+    "body": {
+      "xlarge": {
+        "value": "32px"
+      },
+      "xlarge-responsive": {
+        "value": "24px"
+      },
+      "large": {
+        "value": "24px"
+      },
+      "large-responsive": {
+        "value": "24px"
+      },
+      "medium": {
+        "value": "24px"
+      },
+      "medium-responsive": {
+        "value": "24px"
+      },
+      "small": {
+        "value": "24px"
+      }
+    },
+    "caption": {
+      "value": "16px"
+    }
+  }
+}
