@@ -17,6 +17,6 @@ Default.args = {
 };
 
 export default {
-  title: 'React Components/Atoms/Button',
+  title: 'Atoms/Button',
   component: Button,
 };

@@ -5,6 +5,6 @@ import CircularLoader from './CircularLoader';
 export const Default = (args) => <CircularLoader {...args} />;
 
 export default {
-  title: 'React Components/Atoms/Circular loader',
+  title: 'Atoms/Circular loader',
   component: CircularLoader,
 };
