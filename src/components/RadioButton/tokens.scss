@@ -1,0 +1,13 @@
+@import '~styles/tokens.scss';
+
+$color-radio-button-border: $color-light-grey-50;
+$color-radio-button-bg: $color-white;
+$color-radio-button-bg-hover: $color-light-grey-10;
+$color-radio-button-border-checked: $color-primary;
+$color-radio-button-bg-checked: $color-primary;
+$color-radio-button-checkmark: $color-white;
+$color-radio-button-border-disabled: $color-light-grey-30;
+$color-radio-button-border-disabled-checked: $color-disabled;
+$color-radio-button-bg-disabled: $color-disabled;
+$color-radio-button-checkmark-disabled: $color-light-grey-50;
+$color-radio-button-text: $color-title;

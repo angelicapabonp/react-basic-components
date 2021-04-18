@@ -1,0 +1,124 @@
+@import '~styles';
+@import './tokens';
+
+.radio-button {
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+  min-height: pxToRem(32);
+  min-width: pxToRem(32);
+
+  &:hover {
+    @include hover-state {
+      cursor: pointer;
+
+      input ~ .radio-button__checkmark {
+        background-color: $color-radio-button-bg-hover;
+      }
+    }
+  }
+
+  input {
+    opacity: 0;
+    cursor: pointer;
+    min-height: pxToRem(20);
+    min-width: pxToRem(20);
+    max-width: none;
+    max-height: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &:checked {
+      ~ .radio-button__checkmark:after {
+        display: block;
+      }
+
+      &:enabled ~ .radio-button__checkmark {
+        background-color: $color-radio-button-bg-checked;
+        border-color: $color-radio-button-border-checked;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      ~ .radio-button__checkmark {
+        background-color: $color-radio-button-bg-disabled;
+        border-color: $color-radio-button-border-disabled;
+      }
+
+      &:checked ~ .radio-button__checkmark {
+        border-color: $color-radio-button-border-disabled-checked;
+
+        &:after {
+          border-color: $color-radio-button-checkmark-disabled;
+        }
+      }
+    }
+  }
+}
+
+.radio-button input,
+.radio-button__checkmark {
+  position: absolute;
+  top: calc(50% - pxToRem(10));
+  left: pxToRem(6);
+}
+
+.radio-button__checkmark {
+  height: pxToRem(16);
+  width: pxToRem(16);
+  border: pxToRem(2) solid $color-radio-button-border;
+  border-radius: 50%;
+  background-color: $color-radio-button-bg;
+  pointer-events: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: none;
+    top: pxToRem(3);
+    right: pxToRem(2);
+    width: pxToRem(10);
+    height: pxToRem(5);
+    border: solid $color-radio-button-checkmark;
+    border-width: 0 pxToRem(0 2) pxToRem(2);
+    transform: rotate(-45deg);
+    pointer-events: none;
+  }
+}
+
+.radio-button__text {
+  font-size: $font-size-body-medium;
+  line-height: $line-height-body-medium;
+  font-weight: $font-weight-regular;
+  color: $color-radio-button-text;
+  margin-left: pxToRem(40);
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: pxToRem(120);
+}
+
+.radio-button__group {
+  display: flex;
+
+  &-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-column {
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div,
+    > .radio_button {
+      margin-bottom: pxToRem(8);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
