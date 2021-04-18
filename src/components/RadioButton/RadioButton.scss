@@ -62,7 +62,7 @@
 .radio-button input,
 .radio-button__checkmark {
   position: absolute;
-  top: calc(50% - pxToRem(10));
+  top: calc(50% - #{pxToRem(10)});
   left: pxToRem(6);
 }
 
@@ -83,7 +83,7 @@
     width: pxToRem(10);
     height: pxToRem(5);
     border: solid $color-radio-button-checkmark;
-    border-width: 0 pxToRem(0 2) pxToRem(2);
+    border-width: 0 0 pxToRem(2) pxToRem(2);
     transform: rotate(-45deg);
     pointer-events: none;
   }
