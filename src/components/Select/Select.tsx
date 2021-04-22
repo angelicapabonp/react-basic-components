@@ -42,6 +42,10 @@ type SelectT = {
    * Funcion que devuelve el valor del select (que puede ser prop del objeto o directo lo que esta listado en options)
    */
   onChange: (option: any) => void;
+  /**
+   * Para mostrar/ocultar buscador.
+   */
+  isSearchable?: boolean;
   className?: string;
   classNameContainer?: string;
 };
@@ -78,6 +82,7 @@ function Select({
   textProp,
   filteredBy,
   onChange,
+  isSearchable = false,
   className,
   classNameContainer,
 }: SelectT) {
@@ -266,6 +271,7 @@ function Select({
           onClick={expandOptions}
           onChange={onChangeHandler}
           required
+          readOnly={!isSearchable}
         />
         {!isExpanded && (
           <div className="select_text">
