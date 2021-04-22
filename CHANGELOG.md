@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/angelicapabonp/react-basic-components/compare/v1.4.0...v1.5.0) (2021-04-22)
+
+
+### Features
+
+* **selectradio:** modify some props ([b439f85](https://github.com/angelicapabonp/react-basic-components/commit/b439f85e79808f69a5a7f1b83f3a1e50e141ff0d))
+
 # [1.4.0](https://github.com/angelicapabonp/react-basic-components/compare/v1.3.0...v1.4.0) (2021-04-18)
 
 
