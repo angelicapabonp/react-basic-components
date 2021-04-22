@@ -27,11 +27,11 @@ type RadioButtonT = {
   /**
    * Declares disabled state.
    * */
-  disabled: boolean;
+  disabled?: boolean;
   /**
    * Declares checked attribute.
    * */
-  checked: boolean;
+  checked?: boolean;
   /**
    * Declares onChange function, returns `value` if exists.
    * `(value) => void`

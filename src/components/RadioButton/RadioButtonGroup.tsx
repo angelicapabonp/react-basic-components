@@ -16,7 +16,7 @@ type RadioButtonGroupT = {
   /**
    * Declares direction attribute. `row`, `column`.
    */
-  direction: 'row' | 'column';
+  direction?: 'row' | 'column';
   /**
    * Declares string class to customize the radiobuttongroup.
    */
